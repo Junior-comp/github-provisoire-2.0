@@ -8,7 +8,7 @@ import com.badlogic.gdx.scenes.scene2d.*;
 
 import be.ac.umons.mom.g05.mob.Mobile;
 
-public class Mob extends Actor {
+public class GraphicMob extends Actor {
 	private Animation animation;// pour gerer les animations et on va voir comment ca va faire
 	private Mobile mobile;
 	private TextureRegion texture = new TextureRegion();
@@ -16,7 +16,7 @@ public class Mob extends Actor {
 	private float x;
 	private float y;
 	
-	public Mob(Mobile mobil, Texture img) {// normalement une initialisationn du personnage
+	public GraphicMob(Mobile mobil, Texture img) {// normalement une initialisationn du personnage
 		texture.setRegion(img);
 		this.setSize( img.getWidth(), img.getHeight());
 	}
