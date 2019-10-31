@@ -8,6 +8,8 @@ import com.badlogic.gdx.graphics.*;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.scenes.scene2d.*;
 import com.badlogic.gdx.scenes.scene2d.ui.*;
+import com.badlogic.gdx.utils.viewport.FillViewport;
+import com.badlogic.gdx.utils.viewport.Viewport;
 
 import be.ac.umons.mom.g05.MasterOfMons;
 
@@ -19,12 +21,17 @@ public class MenuScreen implements Screen {
 	private ImageButton Extension;
 	SpriteBatch batch;
 	MasterOfMons game;
+	private int width=864;
+	private int length=1536;
+
 	
 	public MenuScreen(MasterOfMons game) {
 		this.game = game;
 		FileHandle background = Gdx.files.internal("c621b6112664b74b416c834336f86429_original.png");
 		image = new Texture(background);
 		batch = new SpriteBatch();
+	
+		
 	}
 
 	@Override
@@ -39,7 +46,7 @@ public class MenuScreen implements Screen {
 		Gdx.gl.glClearColor(1, 1, 1, 1);
 		Gdx.gl.glClear(GL20.GL_COLOR_BUFFER_BIT);
 		batch.begin();
-		batch.draw( image, 0, 0);
+		batch.draw(image, 0, 0);
 		batch.end();
 	}
 
