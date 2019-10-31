@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry exported="true" kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="src" path="Master_Of_Mons/core/src"/>
+	<classpathentry kind="src" path="Master_Of_Mons/desktop/src"/>
+	<classpathentry exported="true" kind="lib" path="Master_Of_Mons/gradle/wrapper/gradle-wrapper.jar"/>
+	<classpathentry kind="output" path="Master_Of_Mons/core/bin/main"/>
+</classpath>

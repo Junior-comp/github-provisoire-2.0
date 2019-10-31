@@ -4,7 +4,7 @@ public class Player extends Mobile {
 
 	@Override
 	public String speak(Mobile mob) {
-		
+		return null;
 		// TODO Auto-generated method stub
 		
 	}

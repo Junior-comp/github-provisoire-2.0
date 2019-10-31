@@ -5,7 +5,7 @@ public class Pnj extends Mobile {
 	@Override
 	public String speak(Mobile mob) {
 		// TODO Auto-generated method stub
-		
+		return null;
 	}
 
 	@Override
