@@ -7,6 +7,7 @@ import be.ac.umons.mom.g05.MasterOfMons;
 public class DesktopLauncher {
 	public static void main (String[] arg) {
 		LwjglApplicationConfiguration config = new LwjglApplicationConfiguration();
+		config.title = "Master of Mons";
 		new LwjglApplication(new MasterOfMons(), config);
 	}
 }
