@@ -10,9 +10,9 @@ import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import be.ac.umons.mom.g05.ui.screen.*;
 
 public class MasterOfMons extends Game {
-	MenuScreen menue;// normalemen lorsque on lance le jeu c'es celui ci qui est lancé hein 
-	GameScreen GScreen;// la ou le jeu va se passer
-	InitScreen Init;// pour initialiser le jeu 
+	MenuScreen menuscreen; // Screen of the menu
+	GameScreen gamecreen;  // Screen of the game
+	LoadScreen loadscreen; // Screen when you load the game or the menu
 	
 	public MasterOfMons() {
 		super();
@@ -32,7 +32,7 @@ public class MasterOfMons extends Game {
 	public void dispose () {
 	}
 	
-	public void changeScreen() {// changer l'ecran selon 
+	public void changeScreen() {
 		
 	}
 }

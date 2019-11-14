@@ -10,7 +10,7 @@ public abstract class Mobile implements Interaction {
 	private Life life;
 	public String name;
 	public ArrayList<String> lwords = new ArrayList();
-	public Object[] corps = new Object[4]; //pour l'instant ça va repreenter les differentes partie du corps au qeul on va ajouter les armures peut etre et on va ajouter les armes au personnage peut etre en creant 
+	public Object[] body = new Object[4]; // The collection of object that the player can carry 
 	
 	public Mobile() {
 		caract = new Caracteristic();
