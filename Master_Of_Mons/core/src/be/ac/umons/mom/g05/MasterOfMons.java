@@ -10,9 +10,9 @@ import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import be.ac.umons.mom.g05.ui.screen.*;
 
 public class MasterOfMons extends Game {
-	MenuScreen menue;// normalemen lorsque on lance le jeu c'es celui ci qui est lancé hein 
+	MenuScreen menue;// normalemen lorsque on lance le jeu c'es celui ci qui est lancï¿½ hein 
 	GameScreen GScreen;// la ou le jeu va se passer
-	InitScreen Init;// pour initialiser le jeu 
+	LoadingScreen Init;// pour initialiser le jeu 
 	
 	public MasterOfMons() {
 		super();

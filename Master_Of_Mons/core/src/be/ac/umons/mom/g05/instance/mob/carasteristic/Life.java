@@ -1,6 +1,4 @@
-package be.ac.umons.mom.g05.instance.mob.caracteristic;
-
-import be.ac.umons.mom.g05.instance.mob.caracteristic.Caracteristic;
+package be.ac.umons.mom.g05.instance.mob.carasteristic;
 
 public class Life {
 	private int HP;

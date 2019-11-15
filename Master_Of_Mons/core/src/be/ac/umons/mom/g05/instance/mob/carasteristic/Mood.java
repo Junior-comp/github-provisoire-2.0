@@ -1,6 +1,4 @@
-package be.ac.umons.mom.g05.instance.mob.caracteristic;
-
-import be.ac.umons.mom.g05.instance.mob.caracteristic.Mood.Moods;
+package be.ac.umons.mom.g05.instance.mob.carasteristic;
 
 public class Mood {
 	private enum Moods {HUNGRY, NICE, DEFENSIVE,SAD}

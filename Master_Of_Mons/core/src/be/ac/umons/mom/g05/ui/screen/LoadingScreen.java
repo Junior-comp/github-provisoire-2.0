@@ -2,7 +2,7 @@ package be.ac.umons.mom.g05.ui.screen;
 
 import com.badlogic.gdx.Screen;
 
-public class LoadScreen implements Screen {
+public class LoadingScreen implements Screen {
 
 	@Override
 	public void show() {

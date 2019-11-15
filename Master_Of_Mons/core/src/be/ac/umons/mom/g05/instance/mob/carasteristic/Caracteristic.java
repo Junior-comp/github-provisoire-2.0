@@ -1,7 +1,5 @@
-package be.ac.umons.mom.g05.instance.mob.caracteristic;
+package be.ac.umons.mom.g05.instance.mob.carasteristic;
 // les caracteristiques geret tout les trucs de force agilite humeur de la personne mais je ne sais pas si il faut que j'enleve l'humeur
-
-import be.ac.umons.mom.g05.instance.mob.caracteristic.Mood;
 
 public class Caracteristic {
 	private double strength;

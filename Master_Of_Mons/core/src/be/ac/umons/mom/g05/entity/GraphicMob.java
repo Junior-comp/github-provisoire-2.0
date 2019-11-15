@@ -5,8 +5,8 @@ import com.badlogic.gdx.graphics.g2d.Animation;
 import com.badlogic.gdx.graphics.g2d.TextureRegion;
 import com.badlogic.gdx.math.Rectangle;
 import com.badlogic.gdx.scenes.scene2d.*;
+import be.ac.umons.mom.g05.instance.mob.Mobile;
 
-import be.ac.umons.mom.g05.mob.Mobile;
 
 public class GraphicMob extends Actor {
 	private Animation animation; // sprite animation ?

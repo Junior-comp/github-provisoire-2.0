@@ -7,10 +7,10 @@ public class GameManager {
 //un tableau de quetes par niveau(puisque il faut separer les quetes pour chaque niveau)
 // on va gerer l'initialisation du personnage
 	// il faut check si il faut 
-	final private Quest[] BA1;
-	final private Quest[] BA2;
-	final private Quest[] BA3;
-	final private Quest[]MA1;
+	final private Quest[] BA1=null;
+	final private Quest[] BA2=null;
+	final private Quest[] BA3=null;
+	final private Quest[] MA1=null;
 	final private Quest[] MA2 = {new Quest(10)};
 	private PC pc;
 }

@@ -2,10 +2,10 @@ package be.ac.umons.mom.g05.instance.mob;
 
 import be.ac.umons.mom.g05.instance.object.OBject;
 
-public class NPC extends Mobil {// les pnj sont de type spécifique
+public class NPC extends Mobile {// les pnj sont de type spï¿½cifique
 	public enum Type{Boss, Student, Enemies}// les different type de pnj comme il faut pas creer des 
 	
-	public void takeobject(OBject ob) { // la même methode que pour le player selon le type de personnage il aura un sac
+	public void takeobject(OBject ob) { // la mï¿½me methode que pour le player selon le type de personnage il aura un sac
 		for(int i = 0;i < obj.length;i++) {
 			if(obj[i] == null) {
 				obj[i] = ob;

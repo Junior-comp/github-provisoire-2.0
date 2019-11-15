@@ -1,39 +1,39 @@
 package be.ac.umons.mom.g05.instance.mob;
 
-import be.ac.umons.mom.g05.instance.mob.caracteristic.*;
+import be.ac.umons.mom.g05.instance.mob.carasteristic.*;
 import be.ac.umons.mom.g05.instance.object.*;
 enum Type{Costaud, Sportif, Loser, Lambda}// les trait du heros que l'on a besoin
-public class PC extends Mobil {
+public class PC extends Mobile {
 	private Type type;
-	final Level[] quests = { new BA1(),new BA2(), new BA3(),new MA1(), new MA2()}; // ca pourrait se changer en final hein
+	private Caracteristic caract;
 	Bag bag;// le sac du heros
 	
 	public PC(Type type) { // on cree le joueur selon le type au debut du jeu
 		this.type = type;
 		if(type ==Type.Costaud) {
 			Mood mood = new Mood();
-			caract = new Caracteristic(0,0,8.0,5.0,6.0,mood);
-			life = new Life(caract);
+			Caracteristic caract = new Caracteristic(0,0,8.0,5.0,6.0,mood);
+			Life life = new Life(caract);
 		}else if(type == Type.Sportif) {
 			Mood mood = new Mood();
-			caract = new Caracteristic(0,0,6,8,5,mood);
-			life = new Life(caract);
+			Caracteristic caract = new Caracteristic(0,0,6,8,5,mood);
+			Life life = new Life(caract);
 		}else if(type == Type.Loser) {
 			Mood mood = new Mood();
 			mood.changemood(4);
-			caract = new Caracteristic(0,0,4,4,4,mood);
-			life = new Life(caract);
+			Caracteristic caract = new Caracteristic(0,0,4,4,4,mood);
+			Life life = new Life(caract);
 		}else if(type == Type.Lambda) {
 			Mood mood = new Mood();
-			caract = new Caracteristic(0,0,6,6,6,mood);
-			life = new Life(caract);
+			Caracteristic caract = new Caracteristic(0,0,6,6,6,mood);
+			Life life = new Life(caract);
 		}
 	}
 	
-	public PC(Type type, Caracteristic caract) {// les caractristiques sont conservé lorsque il faut lancer le jeu genre il faut charger le jeu
+	public PC(Type type, Caracteristic caract) {// les caractristiques sont conservï¿½ lorsque il faut lancer le jeu genre il faut charger le jeu
 		this.type = type;
 		this.caract = caract;
-		life = new Life(caract);
+		Life life = new Life(caract);
 	}
 	
 	public void addlevel() {// normalement le moyen pour augmenter le niveau 
