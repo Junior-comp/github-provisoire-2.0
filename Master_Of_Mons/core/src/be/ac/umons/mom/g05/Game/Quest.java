@@ -1,4 +1,4 @@
-package be.ac.umons.mom.g05;
+package be.ac.umons.mom.g05.Game;
 
 public class Quest {
 	private int type;
@@ -60,12 +60,13 @@ public class Quest {
 		}
 	}
 	public String getobjectif(int i) {// regarder comment on fait les try catch ap
+		String res = null ;
 		try {
-			return objectif[i];
+			res = objectif[i];
 		}catch(Exception e) {
 			System.err.println("MAn c'est pas bon enleve moi ca");
 		}
-		return objectif[i]; // regarder bien le truc ici hein
+		return res; // regarder bien le truc ici hein
 	}
 	
 	public void changestate(int i) {// trouver la bonne exception
@@ -75,12 +76,23 @@ public class Quest {
 		System.err.println("MAN C'est pas le bon");	
 		}
 	}
+	
 	public boolean getstate(int i) {// changer les chose
+		boolean res = (Boolean) null;
 		try {
-			return objstate[i];
+			res = objstate[i];
 		}catch(Exception e) {
 			System.err.println("MAAAAAAAAAN");
 		}
-		return objstate[i];
+		return res;
+	}
+	
+	public boolean questfinished() {
+		boolean res = true;
+		for(int i = 0;i < objstate.length; i++) {
+			if(objstate[i] == false)
+				res = false;
+		}
+		return res;
 	}
 }
