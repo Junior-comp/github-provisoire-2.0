@@ -18,14 +18,14 @@ public class MenuScreen implements Screen {
 	private ImageButton newgame;
 	private ImageButton load;
 	private ImageButton Extension;
-	MasterOfMons game;
+	private final MasterOfMons game;
 	private int width=864;
 	private int length=1536;
 
 	
 	public MenuScreen(MasterOfMons game) {
 		this.game = game;
-		FileHandle background = Gdx.files.internal("loadingscreen.png");
+		FileHandle background = Gdx.files.internal("menuscreen.png");
 		image = new Texture(background);
 		Image img = new Image(image);
 		stage = new Stage(new ScreenViewport());
