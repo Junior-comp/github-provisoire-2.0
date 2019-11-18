@@ -10,9 +10,6 @@ import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import be.ac.umons.mom.g05.ui.screen.*;
 
 public class MasterOfMons extends Game {
-	MenuScreen menu;
-	GameScreen gamescreen;
-	LoadingScreen loadscreen;
 	
 	public MasterOfMons() {
 		super();
@@ -20,7 +17,7 @@ public class MasterOfMons extends Game {
 	
 	@Override
 	public void create () {
-		this.setScreen(new MenuScreen(this));
+		setScreen(new LoadingScreen());
 	}
 
 	@Override

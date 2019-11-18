@@ -1,7 +1,5 @@
 package be.ac.umons.mom.g05.ui.screen;
-/*
- * le lien de l'image utilis� est : https://www.google.com/
- */
+
 import com.badlogic.gdx.*;
 import com.badlogic.gdx.files.*;
 import com.badlogic.gdx.graphics.*;
