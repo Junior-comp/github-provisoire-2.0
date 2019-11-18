@@ -2,9 +2,10 @@ package be.ac.umons.mom.g05.Game;
 
 import be.ac.umons.mom.g05.Game.Quest;
 
-// ils representeront les diffferents niveau a passer et 
-public class Levelchecker {// il y'aura donc 5 niveau a passer  le ba1 1 ba2 2 ba3 3 ma1 4 ma2 5
-	private Quest[] quests;// chaque niveau auront 2 quêtes 
+// ils representeront les diffferents niveau a passer et il y'aura donc 5 niveau a passer  le ba1 1 ba2 2 ba3 3 ma1 4 ma2 5
+
+public class Levelchecker {
+	private Quest[] quests;       // chaque niveau auront 2 quêtes 
 	public Levelchecker(int i) {
 		quests = new Quest[2];
 		if(i == 1) {

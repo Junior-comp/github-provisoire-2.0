@@ -1,13 +1,15 @@
 package be.ac.umons.mom.g05.instance.mob;
 
-import be.ac.umons.mom.g05.instance.mob.caracteristic.*;
+import be.ac.umons.mom.g05.instance.mob.carasteristic.Caracteristic;
+import be.ac.umons.mom.g05.instance.mob.carasteristic.Life;
+import be.ac.umons.mom.g05.instance.mob.carasteristic.Mood;
 import be.ac.umons.mom.g05.instance.object.*;
 
-public class PC extends Mobil {
+public class PC extends Mobile {
 	private PCType type;
-	Bag bag;// le sac du heros
+	Bag bag;                     // le sac du heros
 	
-	public PC(PCType type) { // on cree le joueur selon le type au debut du jeu
+	public PC(PCType type) {     // on cree le joueur selon le type au debut du jeu
 		this.type = type;
 		if(type ==PCType.Costaud) {
 			Mood mood = new Mood();
@@ -29,27 +31,27 @@ public class PC extends Mobil {
 		}
 	}
 	
-	public PC(PCType type, Caracteristic caract) {// les caractristiques sont conservé lorsque il faut lancer le jeu genre il faut charger le jeu
+	public PC(PCType type, Caracteristic caract) {    // les caractristiques sont conservé lorsque il faut lancer le jeu genre il faut charger le jeu
 		this.type = type;
 		this.caract = caract;
 		life = new Life(caract);
 	}
 	
-	public void addlevel() {// normalement le moyen pour augmenter le niveau 
+	public void addlevel() {                          // normalement le moyen pour augmenter le niveau 
 		caract.increaselevel();
 	}
 	
-	public void takeobject(OBject ob) {// pour prendre les objets sur le sol ou lles objet que ob les donne les les mets sur les main que se soit arme ou qui que ce soit
-		for(int i = 0;i < obj.length;i++) {
-			if(obj[i] == null) {
-				obj[i] = ob;
+	public void takeobject(GameItem gameitem) {               // pour prendre les objets sur le sol ou lles objet que ob les donne les les mets sur les main que se soit arme ou qui que ce soit
+		for(int i = 0;i < bodyitem.length;i++) {
+			if(bodyitem[i] == null) {
+				bodyitem[i] = gameitem;
 				break;
 			}
 		}
 	}
 	
-	public void give(NPC pnj, OBject obj) { // normaly the hero has to give things to a pnj or the pnj has to give the thing to 
-		pnj.takeobject(obj);
+	public void give(NPC pnj, GameItem gameitem) {           // normaly the hero has to give things to a pnj or the pnj has to give the thing to 
+		pnj.takeobject(gameitem);
 	}
 	
 /*

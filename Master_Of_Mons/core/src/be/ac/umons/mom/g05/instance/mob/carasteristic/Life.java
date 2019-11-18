@@ -21,7 +21,7 @@ public class Life {
 		currentlife = newlife;
 	}
 	
-	public void changeHP() {// pour la vie Max
+	public void changeHP() {     // pour la vie Max
 		HP = (int)caract.getstrength() * 20;
 	}
 	

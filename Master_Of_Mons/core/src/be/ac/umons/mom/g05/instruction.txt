@@ -1,6 +1,6 @@
 Junior 16/11/19: Bonjour ceci est un fichier pour vous dire que j'ai placé dans chaque package des fichiers instruction.(en rajoutant qqchose ici).txt
 et dans ces fichier on va commencer à ecrire les modification que on a fait
 et dans le fichier que vous venez de lire on ecrire que on a fait des modification dans tel package et dans tel fichier comme ca on ne perd pas les traces de comment on a fait les trucs et bien sur mentionner la date comme je viens de le faire ici
-Merci.
+Merci. (ba de rien mon pote)
 
 Junior 16/11/19 : J'ai rajouté les fichiers Levechecker(package Game),des enum dans le package mob et caracteristique cad NPCType PCType et Moods a cause des constructeurs

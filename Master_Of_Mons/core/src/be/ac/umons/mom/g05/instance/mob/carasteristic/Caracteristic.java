@@ -1,4 +1,5 @@
 package be.ac.umons.mom.g05.instance.mob.carasteristic;
+
 // les caracteristiques geret tout les trucs de force agilite humeur de la personne mais je ne sais pas si il faut que j'enleve l'humeur
 
 public class Caracteristic {
@@ -45,7 +46,7 @@ public class Caracteristic {
 	public Mood getMood() {
 		return mood;
 	}
-	public double XPMAX(int level) {// le nombre de XP pour atteindre ce niveau
+	public double XPMAX(int level) {          // le nombre de XP pour atteindre ce niveau
 		if(level <= 1) {
 			return 0;
 		}
@@ -54,23 +55,23 @@ public class Caracteristic {
 		}
 	}
 	
-	public void increaselevel() {// augmenter le niveau du person
+	public void increaselevel() {             // augmenter le niveau du person
 		if(XPMAX(level+1) == XP)
 			level++;
 	}
 	
-	public void setSpeed() {// pour la vitesse de deplacement
+	public void setSpeed() {                  // pour la vitesse de deplacement
 		speed = 2 + (agility/20.0);
 	}
 	
 	/*
 	 * la periode d'une attaque physique c
 	 */
-	public String toString() {// ceci est seulement pour montrer les caracteristiques
+	public String toString() {                // ceci est seulement pour montrer les caracteristiques
 		return "strength = "+strength+"  agility = "+agility+ "  defense = "+defense+"  speed = "+speed;
 	}
 	
-	public void reinit() {// ap avoir vu comment remettre les truc en ordre on va rajouter le nombre a moins que ce ne soit pas necessaire
+	public void reinit() {                    // ap avoir vu comment remettre les truc en ordre on va rajouter le nombre a moins que ce ne soit pas necessaire
 		
 	}
 }

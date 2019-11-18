@@ -5,7 +5,7 @@ public class Quest {
 	private boolean finished = false;
 	private String[] objectif;
 	private boolean[] objstate;
-	public Quest(int i) {// on initialise les quetes en fonction de leur 
+	public Quest(int i) {          // on initialise les quetes en fonction de leur 
 		type = i;
 		if(i == 1) {
 			objectif = new String[2];
@@ -59,17 +59,17 @@ public class Quest {
 			objectif[0] = "Win the figth against the Boss";
 		}
 	}
-	public String getobjectif(int i) {// regarder comment on fait les try catch ap
+	public String getobjectif(int i) {      // regarder comment on fait les try catch 
 		String res = null ;
 		try {
 			res = objectif[i];
 		}catch(Exception e) {
 			System.err.println("MAn c'est pas bon enleve moi ca");
 		}
-		return res; // regarder bien le truc ici hein
+		return res;                         // bien regarder le truc ici 
 	}
 	
-	public void changestate(int i) {// trouver la bonne exception
+	public void changestate(int i) {        // trouver la bonne exception
 		try {
 			objstate[i] = true;
 		}catch(Exception e) {
@@ -77,7 +77,7 @@ public class Quest {
 		}
 	}
 	
-	public boolean getstate(int i) {// changer les chose
+	public boolean getstate(int i) {        // changer les choses
 		boolean res = (Boolean) null;
 		try {
 			res = objstate[i];

@@ -1,22 +1,22 @@
 package be.ac.umons.mom.g05.instance.mob;
 
-import be.ac.umons.mom.g05.instance.object.OBject;
+import be.ac.umons.mom.g05.instance.object.GameItem;
 
-public class NPC extends Mobil {// les pnj sont de type spécifique 
+public class NPC extends Mobile {       // les pnj sont de type spécifique 
 	private NPCType type;
 	public NPC() {
 		
 	}
-	public void takeobject(OBject ob) { // la même methode que pour le player selon le type de personnage il aura un sac
-		for(int i = 0;i < obj.length;i++) {
-			if(obj[i] == null) {
-				obj[i] = ob;
+	public void takeobject(GameItem gameitem) { // la même methode que pour le player selon le type de personnage il aura un sac
+		for(int i = 0;i < bodyitem.length;i++) {
+			if(bodyitem[i] == null) {
+				bodyitem[i] = gameitem;
 				break;
 			}
 		}
 	}
 	
-	public void give(PC player, OBject obj) {
+	public void give(PC player, GameItem obj) {
 		player.takeobject(obj);
 	}
 }
