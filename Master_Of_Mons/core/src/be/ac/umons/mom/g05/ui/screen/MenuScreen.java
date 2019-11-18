@@ -13,14 +13,6 @@ import com.badlogic.gdx.utils.viewport.Viewport;
 import be.ac.umons.mom.g05.MasterOfMons;
 
 public class MenuScreen extends AbstractScreen {
-	private Stage stage;
-	private Texture image;
-	private ImageButton newgame;
-	private ImageButton load;
-	private ImageButton Extension;
-	private int width=864;
-	private int length=1536;
-
 	
 	public MenuScreen(MasterOfMons game) {
 		super(game);
@@ -31,7 +23,6 @@ public class MenuScreen extends AbstractScreen {
 		img.setSize(Gdx.graphics.getWidth(), Gdx.graphics.getHeight());
 		img.setPosition(0, 0);
 		stage.addActor(img);
-		
 	}
 
 	@Override
@@ -45,6 +36,9 @@ public class MenuScreen extends AbstractScreen {
 		// TODO Auto-generated method stub
 		Gdx.gl.glClearColor(1, 1, 1, 1);
 		Gdx.gl.glClear(GL20.GL_COLOR_BUFFER_BIT);
+		if(Gdx.input.isKeyPressed(Input.Keys.Q)) {   // Push "A" to switch the screen to GameScreen type
+			game.setScreen(ScreenType.GAME);
+		}
 		stage.act();
 		stage.draw();
 
