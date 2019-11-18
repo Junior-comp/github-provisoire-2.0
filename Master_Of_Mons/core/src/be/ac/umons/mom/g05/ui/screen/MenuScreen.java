@@ -27,7 +27,7 @@ public class MenuScreen implements Screen {
 	
 	public MenuScreen(MasterOfMons game) {
 		this.game = game;
-		FileHandle background = Gdx.files.internal("c621b6112664b74b416c834336f86429_original.png");
+		FileHandle background = Gdx.files.internal("loadingscreen.png");
 		image = new Texture(background);
 		Image img = new Image(image);
 		stage = new Stage(new ScreenViewport());
