@@ -17,7 +17,7 @@ public class MasterOfMons extends Game {
 	
 	private static final String TAG = MasterOfMons.class.getSimpleName();
 	
-	private EnumMap<ScreenType, Screen> screenCache;
+	private EnumMap<ScreenType, AbstractScreen> screenCache;
 	private FitViewport screenViewport;
 	
 	private final int WORLDWIDTH = 17;
@@ -57,7 +57,7 @@ public class MasterOfMons extends Game {
 			// screen is not created yet -> We need to create it
 			try {
 				Gdx.app.debug(TAG, "Creating a new screen: " + screenType);
-				final Screen newScreen = (Screen) ClassReflection.getConstructor(screenType.getScreenClass(),MasterOfMons.class).newInstance(this);
+				final AbstractScreen newScreen = (AbstractScreen) ClassReflection.getConstructor(screenType.getScreenClass(),MasterOfMons.class).newInstance(this);
 				screenCache.put(screenType, newScreen);
 				setScreen(newScreen);
 			} catch(ReflectionException e) {

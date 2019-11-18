@@ -7,12 +7,10 @@ import com.badlogic.gdx.graphics.GL20;
 
 import be.ac.umons.mom.g05.MasterOfMons;
 
-public class LoadingScreen implements Screen {
-	
-	private final MasterOfMons game;
+public class LoadingScreen extends AbstractScreen {
 	
 	public LoadingScreen(final MasterOfMons game) {
-		this.game=game;
+		super(game);
 	}
 
 	@Override
@@ -26,7 +24,7 @@ public class LoadingScreen implements Screen {
 		Gdx.gl.glClearColor(0, 1, 0, 1);
 		Gdx.gl.glClear(GL20.GL_COLOR_BUFFER_BIT);
 		
-		if(Gdx.input.isKeyPressed(Input.Keys.A)) {
+		if(Gdx.input.isKeyPressed(Input.Keys.A)) {   // Push "A" to switch the screen to GameScreen type
 			game.setScreen(ScreenType.GAME);
 		}
 	}

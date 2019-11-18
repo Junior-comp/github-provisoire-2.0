@@ -12,19 +12,18 @@ import com.badlogic.gdx.utils.viewport.Viewport;
 
 import be.ac.umons.mom.g05.MasterOfMons;
 
-public class MenuScreen implements Screen {
+public class MenuScreen extends AbstractScreen {
 	private Stage stage;
 	private Texture image;
 	private ImageButton newgame;
 	private ImageButton load;
 	private ImageButton Extension;
-	private final MasterOfMons game;
 	private int width=864;
 	private int length=1536;
 
 	
 	public MenuScreen(MasterOfMons game) {
-		this.game = game;
+		super(game);
 		FileHandle background = Gdx.files.internal("menuscreen.png");
 		image = new Texture(background);
 		Image img = new Image(image);
