@@ -1,0 +1,2 @@
+Junior 16/11/19:ici se fera le developpement de la partie logic du jeu c'est a dire que c'est ici que on va gerer les parties les niveau les interactions
+et si il faut rajouter des trucs de libgdx on va le faire et si vous avez des erreurs avec eclipse c'est pas ma faute desolée 

@@ -8,8 +8,8 @@ public class DesktopLauncher {
 	public static void main (String[] arg) {
 		LwjglApplicationConfiguration config = new LwjglApplicationConfiguration();
 		config.title = "Master of Mons";
-		config.width=496;
-		config.height=272;
+		config.width=750;
+		config.height=750;
 		new LwjglApplication(new MasterOfMons(), config);
 	}
 }
