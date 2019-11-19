@@ -6,6 +6,11 @@ import com.badlogic.gdx.Application;
 import com.badlogic.gdx.Game;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.Screen;
+import com.badlogic.gdx.assets.AssetManager;
+import com.badlogic.gdx.graphics.OrthographicCamera;
+import com.badlogic.gdx.graphics.g2d.SpriteBatch;
+import com.badlogic.gdx.maps.tiled.TiledMap;
+import com.badlogic.gdx.maps.tiled.TmxMapLoader;
 import com.badlogic.gdx.utils.GdxRuntimeException;
 import com.badlogic.gdx.utils.reflect.ClassReflection;
 import com.badlogic.gdx.utils.reflect.ReflectionException;
@@ -19,10 +24,17 @@ public class MasterOfMons extends Game {
 	
 	private EnumMap<ScreenType, AbstractScreen> screenCache;
 	private FitViewport screenViewport;
+	private OrthographicCamera gamecamera;
+	private SpriteBatch spritebatch;
 	
-	private final int WORLDWIDTH = 17;
-	private final int WORLDHEIGHT = 31;
+	public int WORLDWIDTH = 256;
+	public int WORLDHEIGHT = 256;
+	
+	private final int CAMERAWIDTH = 31;
+	private final int CAMERAHEIGHT= 17;
 
+
+	private AssetManager assetmanager;
 	
 	public MasterOfMons() {
 		super();
@@ -31,10 +43,17 @@ public class MasterOfMons extends Game {
 	@Override
 	public void create () {
 		Gdx.app.setLogLevel(Application.LOG_DEBUG);
+		spritebatch=new SpriteBatch();
 		
-		screenViewport = new FitViewport(WORLDWIDTH,WORLDHEIGHT);
+		// create assetmanager
+		assetmanager = new AssetManager();
+		assetmanager.setLoader(TiledMap.class, new TmxMapLoader(assetmanager.getFileHandleResolver()));
+		
+		// create first screen
+		gamecamera=new OrthographicCamera();
+		screenViewport = new FitViewport(WORLDWIDTH,WORLDHEIGHT,gamecamera);
 		screenCache = new EnumMap<ScreenType,AbstractScreen>(ScreenType.class);
-		setScreen(ScreenType.LOADING);
+		setScreen(ScreenType.MENU);
 	}
 
 	@Override
@@ -44,6 +63,7 @@ public class MasterOfMons extends Game {
 	
 	@Override
 	public void dispose () {
+		assetmanager.dispose();
 	}
 	
 	/**
@@ -74,5 +94,17 @@ public class MasterOfMons extends Game {
 	public FitViewport getScreenViewport() {
 		// TODO Auto-generated method stub
 		return screenViewport;
+	}
+	
+	public AssetManager getAssetManager() {
+		return assetmanager;
+	}
+	
+	public OrthographicCamera getGameCamera() {
+		return gamecamera;
+	}
+	
+	public SpriteBatch getSpriteBatch() {
+		return spritebatch;
 	}
 }

@@ -37,7 +37,7 @@ public class MenuScreen extends AbstractScreen {
 		Gdx.gl.glClearColor(1, 1, 1, 1);
 		Gdx.gl.glClear(GL20.GL_COLOR_BUFFER_BIT);
 		if(Gdx.input.isKeyPressed(Input.Keys.Q)) {   // Push "A" to switch the screen to GameScreen type
-			game.setScreen(ScreenType.GAME);
+			game.setScreen(ScreenType.LOADING);
 		}
 		stage.act();
 		stage.draw();

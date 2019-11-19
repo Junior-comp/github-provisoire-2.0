@@ -16,8 +16,8 @@ public abstract class AbstractScreen implements Screen {
     protected Stage stage;
     protected Texture image;
     
-    protected int width=864;
-    protected int length=1536;
+    protected int width=4096;
+    protected int length=4096;
 
     
     public AbstractScreen(final MasterOfMons game) {
