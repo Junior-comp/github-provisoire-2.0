@@ -21,7 +21,6 @@ public class PC extends Mobile {
 			life = new Life(caract);
 		}else if(type == PCType.Loser) {
 			Mood mood = new Mood();
-			mood.changemood(4);
 			caract = new Caracteristic(0,0,4,4,4,mood);
 			life = new Life(caract);
 		}else if(type == PCType.Lambda) {

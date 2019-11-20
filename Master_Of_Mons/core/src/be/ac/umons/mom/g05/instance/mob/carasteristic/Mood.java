@@ -1,23 +1,26 @@
 package be.ac.umons.mom.g05.instance.mob.carasteristic;
 
 public class Mood {
-	Moods mood;
+	MoodType moodtype;
 	public Mood() {
-		mood = Moods.NICE;
+		moodtype = MoodType.NEUTRAL;
 	}
 	
-	public Mood(Moods mood) {
-		this.mood = mood;
+	public Mood(MoodType moodtype) {
+		this.moodtype = moodtype;
 	}
 	
-	public void changemood(int i) {
-		if(i == 1)
-			mood = Moods.HUNGRY;
-		else if(i == 2)
-			mood = Moods.NICE;
-		else if(i == 3)
-			mood = Moods.DEFENSIVE;
-		else if(i == 4)
-			mood = Moods.SAD;
+	public void changeMood(MoodType moodtype) {
+		if(moodtype==MoodType.NEUTRAL)
+			this.moodtype = MoodType.NEUTRAL;
+		
+		else if(moodtype==MoodType.AGGRESSIVE)
+			this.moodtype = MoodType.AGGRESSIVE;
+		
+		else if(moodtype==MoodType.DEFENSIVE)
+			this.moodtype = MoodType.DEFENSIVE;
+		
+		else if(moodtype==MoodType.FRIENDLY)
+			this.moodtype = MoodType.FRIENDLY;
 	}
 }
